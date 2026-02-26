@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Matt</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+                <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="jumbotron text-center bg-light">
+            <h1 class="display-4">Hi, I'm Matt!</h1>
+            <p class="lead">Welcome to my personal website.</p>
+            <hr class="my-4">
+            <p>Click for a random surprise message:</p>
+            <button id="surpriseBtn" class="btn btn-primary btn-lg">Surprise Me</button>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3>Welcome</h3>
+                <p>This is my homepage.</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Random Quote</h3>
+                <blockquote class="blockquote">
+                    <p id="quote">Loading quote...</p>
+                    <footer class="blockquote-footer">Someone smart, probably</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>© 2026 Matt — Built with HTML, CSS, JavaScript + Bootstrap</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+        // Surprise button with random message
+        document.getElementById("surpriseBtn").addEventListener("click", function() {
+            const messages = [
+                "You're doing great today! 🌟",
+                "Keep going! 🧗",
+                "404: Boring message not found",
+                "Coffee → Code → Repeat ☕",
+                "You just made this button very happy"
+            ];
+            const msg = messages[Math.floor(Math.random() * messages.length)];
+            alert(msg);
+        });
+
+        // Rotating quotes
+        const quotes = [
+            "The best error message is the one that never shows up.",
+            "Code is like humor. When you have to explain it, it's bad.",
+            "First, solve the problem. Then, write the code.",
+            "Talk is cheap. Show me the code. — Linus Torvalds",
+            "It's not a bug — it's an undocumented feature."
+        ];
+
+        function updateQuote() {
+            const el = document.getElementById("quote");
+            const random = quotes[Math.floor(Math.random() * quotes.length)];
+            el.textContent = random;
+        }
+
+        setInterval(updateQuote, 8000);
+        updateQuote(); // run once immediately
+    </script>
+</body>
+</html>

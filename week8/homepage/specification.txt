@@ -1,0 +1,38 @@
+HTML tags used (10 different ones besides <html><head><body><title>):
+
+1. nav         - navigation bar
+2. button      - interactive surprise button
+3. div         - layout containers
+4. h1, h3, h5  - headings of different levels
+5. p           - paragraphs
+6. ul / li     - unordered list with list items (can be added back if needed)
+7. blockquote  - styled quote block
+8. footer      - page footer
+9. img         - images on photos page
+10. a          - hyperlinks in navigation
+
+CSS properties used (at least 5 different ones):
+
+1. font-family
+2. color
+3. font-weight
+4. background-color
+5. padding
+6. border-radius
+7. transform
+8. transition
+9. box-shadow
+10. margin
+
+JavaScript usage:
+Two features:
+1. A button that shows a random fun/silly message using alert()
+2. A quote in the home page that automatically changes to a different random quote every 8 seconds using setInterval
+
+Bootstrap features used:
+- Responsive navbar (with collapse on mobile)
+- Jumbotron component
+- Grid system (container, row, col-md-*)
+- Cards with card-body, card-title, card-text
+- Button styling (btn, btn-primary, btn-lg)
+- Utility classes (mt-5, mb-4, text-center, bg-dark, shadow-sm, etc.)

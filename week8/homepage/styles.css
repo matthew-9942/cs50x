@@ -1,0 +1,42 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.highlight {
+    color: #e74c3c;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+#surpriseBtn {
+    transition: all 0.25s ease;
+}
+
+#surpriseBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.jumbotron {
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.4px;
+}

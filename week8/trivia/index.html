@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                
+                // Part 1: Multiple choice question
+                let buttons = document.querySelectorAll('.multiple-choice button');
+                buttons.forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        let correct = button.getAttribute('data-correct');
+                        let feedback = document.querySelector('#feedback1');
+                        
+                        if (correct === 'true') {
+                            button.style.backgroundColor = 'green';
+                            feedback.innerHTML = 'Correct!';
+                            feedback.style.color = 'green';
+                        } else {
+                            button.style.backgroundColor = 'red';
+                            feedback.innerHTML = 'Incorrect';
+                            feedback.style.color = 'red';
+                        }
+                    });
+                });
+
+                // Part 2: Free response question
+                document.querySelector('#check-answer').addEventListener('click', function() {
+                    let input = document.querySelector('#answer-input');
+                    let answer = input.value.trim().toLowerCase();
+                    let feedback = document.querySelector('#feedback2');
+                    
+                    // Accept multiple correct answers
+                    if (answer === 'paris' || answer === 'the city of light') {
+                        input.style.backgroundColor = 'lightgreen';
+                        feedback.innerHTML = 'Correct!';
+                        feedback.style.color = 'green';
+                    } else {
+                        input.style.backgroundColor = 'lightcoral';
+                        feedback.innerHTML = 'Incorrect';
+                        feedback.style.color = 'red';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice</h2>
+                <hr>
+                <div class="multiple-choice">
+                    <h3>What is the largest planet in our solar system?</h3>
+                    <button data-correct="false">Saturn</button>
+                    <button data-correct="true">Jupiter</button>
+                    <button data-correct="false">Neptune</button>
+                    <button data-correct="false">Uranus</button>
+                    <p id="feedback1"></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the capital of France?</h3>
+                <input type="text" id="answer-input" placeholder="Type your answer here">
+                <button id="check-answer">Check Answer</button>
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>
