@@ -1,0 +1,28 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+Looking at the 2018 top songs, this person's audio aura would probably be pretty energetic and upbeat. Since these were the most popular songs on Spotify that year, they're mostly high-energy pop and hip-hop tracks - stuff like Drake, Post Malone, and other mainstream hits. The listener seems to enjoy music that's danceable and positive, the kind of stuff you'd hear at parties or on the radio. Overall, their vibe would be energetic and fun-loving.
+
+
+Hypothesize about why the way you've calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+Just averaging everything doesn't really tell the full story. Here are some issues:
+
+First, not all songs matter equally. Maybe someone played one song 200 times and another only twice, but both count the same in the average. That doesn't make sense - the songs you actually love and replay constantly should matter more.
+
+Second, averages hide the details. If I listen to half sad songs and half happy songs, my average might look "medium happy," but that's not really me - I'm either in a mood for sad music or happy music. The average makes me seem boring when I'm actually all over the place.
+
+Third, this doesn't consider when or why you listen to music. I might listen to hype music at the gym, calm music while studying, and sad music at night. Just mashing it all together loses all that context.
+
+Also, one or two weird songs can throw everything off. If you have 98 energetic songs and 2 slow ballads, those ballads will drag down your average even though they barely represent what you actually like.
+
+Better ways to do this:
+
+- Weight songs by how many times they were actually played. If you played a song 100 times, it clearly matters more to you than something you played once.
+
+- Look at patterns instead of just averages. Maybe you're a "happy OR sad" person, not a "medium mood" person. Spotify could identify your different moods and say "you're 60% high-energy party mode and 40% late-night sad vibes."
+
+- Consider time of day or season. Maybe you're upbeat in summer and more chill in winter. Or you listen to different stuff on weekends versus weekdays.
+
+- Compare to other people. Just saying "your energy is 0.7" doesn't mean much, but saying "you listen to way more energetic music than 80% of users" actually tells you something about yourself.
+
+Basically, people are complicated and just averaging numbers misses most of what makes someone's music taste interesting.
